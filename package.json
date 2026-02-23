@@ -2,13 +2,23 @@
   "name": "tabloom",
   "version": "1.0.0",
   "description": "Reusable React Native / Expo table primitives extracted from wooftech",
-  "type": "module",
-  "main": "src/index.jsx",
+  "files": [
+    "build/**"
+  ],
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "license": "UNLICENSED",
   "scripts": {
+    "build": "expo-module build",
     "build:example:dist": "EXPO_NONINTERACTIVE=1 cd example && npx expo export --platform web --output-dir ../dist",
+    "clean": "expo-module clean",
+    "lint": "ESLINT_USE_FLAT_CONFIG=false npx eslint src spec scripts",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "release:patch": "npm version patch -m \"Bump version to %s\" && git push --follow-tags && npm whoami || npm login && npm publish",
     "test": "node scripts/velocious-test.js",
-    "test:dist": "npm run build:example:dist && SYSTEM_TEST_HOST=dist npm test"
+    "test:dist": "npm run build:example:dist && SYSTEM_TEST_HOST=dist npm test",
+    "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
     "react": ">=18",
@@ -22,12 +32,16 @@
     "ya-use-event-emitter": "^0.1.2"
   },
   "devDependencies": {
+    "@types/react": "^19.2.14",
     "awaitery": "^1.0.13",
+    "eslint-plugin-jsdoc": "^62.0.0",
     "expo": "~52.0.49",
+    "expo-module-scripts": "4.0.2",
     "scoundrel-remote-eval": "1.0.31",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
     "system-testing": "^1.0.75",
+    "typescript": "^5.3.3",
     "velocious": "^1.0.176"
   }
 }
