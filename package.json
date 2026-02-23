@@ -1,6 +1,6 @@
 {
   "name": "tabloom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable React Native / Expo table primitives extracted from wooftech",
   "files": [
     "build/**"
