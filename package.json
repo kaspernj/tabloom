@@ -28,7 +28,7 @@
     "eventemitter3": "^5.0.1",
     "prop-types": "^15.8.1",
     "set-state-compare": "^1.0.72",
-    "uuid": "^9.0.1",
+    "uuid": "^13.0.0",
     "ya-use-event-emitter": "^0.1.2"
   },
   "devDependencies": {
