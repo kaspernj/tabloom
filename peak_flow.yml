@@ -1,0 +1,5 @@
+before_script:
+  - npm install
+  - (cd example && npm install)
+script:
+  - npm run test:dist
