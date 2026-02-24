@@ -1,6 +1,6 @@
 {
   "name": "tabloom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable React Native / Expo table primitives extracted from wooftech",
   "files": [
     "build/**"
@@ -32,11 +32,13 @@
     "ya-use-event-emitter": "^0.1.2"
   },
   "devDependencies": {
-    "@types/react": "^19.2.14",
+    "@types/react": "~19.1.10",
     "awaitery": "^1.0.13",
     "eslint-plugin-jsdoc": "^62.0.0",
     "expo": "~54.0.33",
     "expo-module-scripts": "4.0.2",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
     "scoundrel-remote-eval": "1.0.31",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
