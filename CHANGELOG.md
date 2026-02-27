@@ -1,0 +1,1 @@
+- Fix `Column` style application timing so static style props (for example `backgroundColor`) are applied during render instead of relying on post-render mutation in `useLayoutEffect`.
