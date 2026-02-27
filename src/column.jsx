@@ -41,20 +41,22 @@ export default React.memo(shapeComponent(class TableColumn extends ShapeComponen
     }, [])
     this.header = this.headerData.header
     this.width = React.useMemo(() => new Animated.Value(this.headerData.width || 0), [])
-    this.style = React.useMemo(() => ({width: this.tt.width}), [])
+    this.style = React.useMemo(() => {
+      const resolvedStyle = {width: this.tt.width}
 
-    React.useLayoutEffect(() => {
       if (typeof style == "function") {
         style({
           column: this,
           headerData: this.tt.headerData,
           rowContext: this.tt.rowContext,
-          style: this.style,
+          style: resolvedStyle,
           tableContext: this.tt.tableContext
         })
       } else if (style) {
-        Object.assign(this.style, StyleSheet.flatten(style))
+        Object.assign(resolvedStyle, StyleSheet.flatten(style))
       }
+
+      return resolvedStyle
     }, [style])
 
     useEventEmitter(this.tableContext.events, `column-width-changed-${this.tt.header.id}`, this.tt.onColumnWidthChanged)
