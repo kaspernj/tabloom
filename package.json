@@ -32,12 +32,12 @@
     "ya-use-event-emitter": "^0.1.2"
   },
   "devDependencies": {
-    "@types/react": "~19.1.10",
+    "@types/react": "~19.2.15",
     "awaitery": "^1.0.13",
     "eslint-plugin-jsdoc": "^62.0.0",
     "expo": "~54.0.34",
     "expo-module-scripts": "5.0.8",
-    "react": "19.1.0",
+    "react": "19.2.6",
     "react-native": "0.81.5",
     "release-patch": "^1.0.0",
     "scoundrel-remote-eval": "1.0.34",
