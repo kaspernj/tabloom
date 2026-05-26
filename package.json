@@ -40,7 +40,7 @@
     "react": "19.1.0",
     "react-native": "0.81.5",
     "release-patch": "^1.0.0",
-    "scoundrel-remote-eval": "1.0.31",
+    "scoundrel-remote-eval": "1.0.34",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
     "system-testing": "^1.0.75",
