@@ -9,7 +9,7 @@
   "types": "build/index.d.ts",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "expo-module build",
+    "build": "EXPO_NONINTERACTIVE=1 expo-module build",
     "build:example:dist": "EXPO_NONINTERACTIVE=1 cd example && npx expo export --platform web --output-dir ../dist",
     "clean": "expo-module clean",
     "lint": "ESLINT_USE_FLAT_CONFIG=false npx eslint src spec scripts",
@@ -18,7 +18,8 @@
     "release:patch": "release-patch",
     "test": "node scripts/velocious-test.js",
     "test:dist": "npm run build:example:dist && SYSTEM_TEST_HOST=dist npm test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "watch": "expo-module build --watch"
   },
   "peerDependencies": {
     "react": ">=18",
