@@ -42,7 +42,7 @@
     "release-patch": "^1.0.0",
     "scoundrel-remote-eval": "1.0.34",
     "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7",
+    "sqlite3": "^6.0.1",
     "system-testing": "^1.0.75",
     "typescript": "^5.3.3",
     "velocious": "^1.0.176"
