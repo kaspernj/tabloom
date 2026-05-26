@@ -38,7 +38,7 @@
     "expo": "~54.0.34",
     "expo-module-scripts": "5.0.8",
     "react": "19.1.0",
-    "react-native": "0.81.5",
+    "react-native": "0.85.3",
     "release-patch": "^1.0.0",
     "scoundrel-remote-eval": "1.0.34",
     "sqlite": "^5.1.1",
