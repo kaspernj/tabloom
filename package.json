@@ -1,6 +1,6 @@
 {
   "name": "tabloom",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Reusable React Native / Expo table primitives extracted from wooftech",
   "files": [
     "build/**"
@@ -15,7 +15,7 @@
     "lint": "ESLINT_USE_FLAT_CONFIG=false npx eslint src spec scripts",
     "prepare": "expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
-    "release:patch": "npm version patch -m \"Bump version to %s\" && git push --follow-tags && npm whoami || npm login && npm publish",
+    "release:patch": "release-patch",
     "test": "node scripts/velocious-test.js",
     "test:dist": "npm run build:example:dist && SYSTEM_TEST_HOST=dist npm test",
     "typecheck": "tsc --noEmit"
@@ -28,17 +28,17 @@
     "eventemitter3": "^5.0.1",
     "prop-types": "^15.8.1",
     "set-state-compare": "^1.0.72",
-    "uuid": "^9.0.1",
     "ya-use-event-emitter": "^0.1.2"
   },
   "devDependencies": {
     "@types/react": "~19.1.10",
     "awaitery": "^1.0.13",
     "eslint-plugin-jsdoc": "^62.0.0",
-    "expo": "~54.0.33",
+    "expo": "~54.0.34",
     "expo-module-scripts": "5.0.8",
     "react": "19.1.0",
     "react-native": "0.81.5",
+    "release-patch": "^1.0.0",
     "scoundrel-remote-eval": "1.0.31",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
