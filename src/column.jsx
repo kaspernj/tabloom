@@ -3,11 +3,11 @@ import {shapeComponent, ShapeComponent} from "set-state-compare/build/shape-comp
 import React from "react"
 import {RowContext} from "./row"
 import {TableContext} from "./table"
+import generateId from "./generate-id"
 import useEventEmitter from "ya-use-event-emitter"
-import {v4 as uuidv4} from "uuid"
 
 export default React.memo(shapeComponent(class TableColumn extends ShapeComponent {
-  id = uuidv4()
+  id = generateId()
   position = null
 
   setup() {

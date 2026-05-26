@@ -2,8 +2,8 @@ import {shapeComponent, ShapeComponent} from "set-state-compare/build/shape-comp
 import {Animated} from "react-native"
 import React from "react"
 import {TableContext} from "./table"
+import generateId from "./generate-id"
 import useEventEmitter from "ya-use-event-emitter"
-import {v4 as uuidv4} from "uuid"
 
 const RowContext = React.createContext()
 
@@ -12,7 +12,7 @@ export {RowContext}
 export default React.memo(shapeComponent(class TableRow extends ShapeComponent {
   columns = {}
   columnsCount = 0
-  id = uuidv4()
+  id = generateId()
   position = null
 
   setup() {

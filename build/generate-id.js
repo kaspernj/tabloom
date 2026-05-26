@@ -1,0 +1,13 @@
+let counter = 0;
+/**
+ * Generates a process-unique identifier for table headers, rows, and columns.
+ *
+ * Uses a module-level counter instead of `uuid` so the package bundles cleanly
+ * under Metro / react-native-web, where `uuid` v9's ESM wrapper fails to resolve.
+ * @returns {string} A process-unique identifier.
+ */
+export default function generateId() {
+    counter += 1;
+    return `tabloom-${counter}`;
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2VuZXJhdGUtaWQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvZ2VuZXJhdGUtaWQuanN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLElBQUksT0FBTyxHQUFHLENBQUMsQ0FBQTtBQUVmOzs7Ozs7R0FNRztBQUNILE1BQU0sQ0FBQyxPQUFPLFVBQVUsVUFBVTtJQUNoQyxPQUFPLElBQUksQ0FBQyxDQUFBO0lBRVosT0FBTyxXQUFXLE9BQU8sRUFBRSxDQUFBO0FBQzdCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgY291bnRlciA9IDBcblxuLyoqXG4gKiBHZW5lcmF0ZXMgYSBwcm9jZXNzLXVuaXF1ZSBpZGVudGlmaWVyIGZvciB0YWJsZSBoZWFkZXJzLCByb3dzLCBhbmQgY29sdW1ucy5cbiAqXG4gKiBVc2VzIGEgbW9kdWxlLWxldmVsIGNvdW50ZXIgaW5zdGVhZCBvZiBgdXVpZGAgc28gdGhlIHBhY2thZ2UgYnVuZGxlcyBjbGVhbmx5XG4gKiB1bmRlciBNZXRybyAvIHJlYWN0LW5hdGl2ZS13ZWIsIHdoZXJlIGB1dWlkYCB2OSdzIEVTTSB3cmFwcGVyIGZhaWxzIHRvIHJlc29sdmUuXG4gKiBAcmV0dXJucyB7c3RyaW5nfSBBIHByb2Nlc3MtdW5pcXVlIGlkZW50aWZpZXIuXG4gKi9cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIGdlbmVyYXRlSWQoKSB7XG4gIGNvdW50ZXIgKz0gMVxuXG4gIHJldHVybiBgdGFibG9vbS0ke2NvdW50ZXJ9YFxufVxuIl19

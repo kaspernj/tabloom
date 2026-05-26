@@ -1,1 +1,2 @@
+- Replace the `uuid` dependency with an internal module-counter id generator so the package bundles cleanly under Metro / react-native-web, where `uuid` v9's ESM wrapper fails to resolve (`Cannot read properties of undefined (reading 'v1')`).
 - Fix `Column` style application timing so static style props (for example `backgroundColor`) are applied during render instead of relying on post-render mutation in `useLayoutEffect`.

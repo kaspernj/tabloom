@@ -1,6 +1,6 @@
 {
   "name": "tabloom",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Reusable React Native / Expo table primitives extracted from wooftech",
   "files": [
     "build/**"
@@ -28,7 +28,6 @@
     "eventemitter3": "^5.0.1",
     "prop-types": "^15.8.1",
     "set-state-compare": "^1.0.72",
-    "uuid": "^9.0.1",
     "ya-use-event-emitter": "^0.1.2"
   },
   "devDependencies": {
