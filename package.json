@@ -34,7 +34,7 @@
   "devDependencies": {
     "@types/react": "~19.1.10",
     "awaitery": "^1.0.13",
-    "eslint-plugin-jsdoc": "^63.0.0",
+    "eslint-plugin-jsdoc": "^64.1.0",
     "expo": "~54.0.34",
     "expo-module-scripts": "5.0.8",
     "react": "19.1.0",
