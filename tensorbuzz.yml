@@ -1,0 +1,19 @@
+# Path filter: keep the build broad for repository changes, while excluding
+# documentation-only edits that cannot affect the package or system tests.
+# `tensorbuzz.yml` is intentionally omitted: TensorBuzz runs every build when
+# this configuration changes so the change cannot skip the build it affects.
+before_script:
+  - npm install
+  - (cd example && npm install)
+paths:
+  - "**"
+  - "!AGENTS.md"
+  - "!CHANGELOG.md"
+  - "!LICENSE"
+  - "!README.md"
+  - "!docs/**"
+script:
+  - npm run lint
+  - npm run typecheck
+  - npm run test:dist
+  - npx expo-doctor
