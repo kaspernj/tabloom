@@ -1,19 +1,49 @@
-# Path filter: keep the build broad for repository changes, while excluding
-# documentation-only edits that cannot affect the package or system tests.
-# `tensorbuzz.yml` is intentionally omitted: TensorBuzz runs every build when
-# this configuration changes so the change cannot skip the build it affects.
+dependency_roots:
+  - path: .
 before_script:
   - npm install
   - (cd example && npm install)
-paths:
-  - "**"
-  - "!AGENTS.md"
-  - "!CHANGELOG.md"
-  - "!LICENSE"
-  - "!README.md"
-  - "!docs/**"
-script:
-  - npm run lint
-  - npm run typecheck
-  - npm run test:dist
-  - npx expo-doctor
+
+builds:
+  package:
+    name: Package lint, types, and build
+    paths:
+      - src/**
+      - scripts/**
+      - spec/**
+      - .github/**
+      - .eslintrc.js
+      - package.json
+      - package-lock.json
+      - tsconfig.json
+      - expo-module.config.json
+      - tensorbuzz.yml
+      - "!README.md"
+      - "!CHANGELOG.md"
+      - "!LICENSE"
+    script:
+      - npm run lint
+      - npm run typecheck
+      - npm run build
+
+  example:
+    name: Example system tests and Expo validation
+    paths:
+      - src/**
+      - scripts/**
+      - spec/**
+      - example/**
+      - .github/**
+      - .eslintrc.js
+      - package.json
+      - package-lock.json
+      - example/package.json
+      - example/package-lock.json
+      - expo-module.config.json
+      - tensorbuzz.yml
+      - "!README.md"
+      - "!CHANGELOG.md"
+      - "!LICENSE"
+    script:
+      - npm run test:dist
+      - npx expo-doctor
