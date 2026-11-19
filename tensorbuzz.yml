@@ -1,12 +1,8 @@
-dependency_roots:
-  - path: .
-before_script:
-  - npm install
-  - (cd example && npm install)
-
 builds:
   package:
     name: Package lint, types, and build
+    dependency_roots:
+      - path: .
     paths:
       - src/**
       - scripts/**
@@ -28,6 +24,9 @@ builds:
 
   example:
     name: Example system tests and Expo validation
+    dependency_roots:
+      - path: .
+      - path: example
     paths:
       - src/**
       - scripts/**
