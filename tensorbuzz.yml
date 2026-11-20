@@ -1,0 +1,48 @@
+builds:
+  package:
+    name: Package lint, types, and build
+    dependency_roots:
+      - path: .
+    paths:
+      - src/**
+      - scripts/**
+      - spec/**
+      - .github/**
+      - .eslintrc.js
+      - package.json
+      - package-lock.json
+      - tsconfig.json
+      - expo-module.config.json
+      - tensorbuzz.yml
+      - "!README.md"
+      - "!CHANGELOG.md"
+      - "!LICENSE"
+    script:
+      - npm run lint
+      - npm run typecheck
+      - npm run build
+
+  example:
+    name: Example system tests and Expo validation
+    dependency_roots:
+      - path: .
+      - path: example
+    paths:
+      - src/**
+      - scripts/**
+      - spec/**
+      - example/**
+      - .github/**
+      - .eslintrc.js
+      - package.json
+      - package-lock.json
+      - example/package.json
+      - example/package-lock.json
+      - expo-module.config.json
+      - tensorbuzz.yml
+      - "!README.md"
+      - "!CHANGELOG.md"
+      - "!LICENSE"
+    script:
+      - npm run test:dist
+      - npx expo-doctor

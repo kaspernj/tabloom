@@ -1,8 +1,0 @@
-before_script:
-  - npm install
-  - (cd example && npm install)
-script:
-  - npm run lint
-  - npm run typecheck
-  - npm run test:dist
-  - npx expo-doctor
