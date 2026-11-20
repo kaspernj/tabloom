@@ -1,4 +1,6 @@
 import React from "react"
+
+// TensorBuzz path-filter probe: this harmless example-only change must not run the package lane.
 import {SafeAreaView, ScrollView, StyleSheet, Text, View} from "react-native"
 import SystemTestBrowserHelper from "system-testing/build/system-test-browser-helper.js"
 
